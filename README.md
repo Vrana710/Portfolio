@@ -14,7 +14,13 @@ Welcome to my portfolio! I am Varsha Rana, a Software Engineer with a background
 
 ![My Portfolio](assets/home.png)
 
-Watch the demo video of the 
+Watch the demo video of the MyPortfolio.
+
+https://github.com/user-attachments/assets/e89123a2-529e-4b0b-b4cc-6679414393fe
+
+Alternatively, you can view the video directly in the browser [here](https://github.com/user-attachments/assets/e89123a2-529e-4b0b-b4cc-6679414393fe).
+
+Note: If you are not able to see the video, you may need to download it to view it properly.
 
 
 ## Contributing
