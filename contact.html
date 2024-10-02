@@ -59,7 +59,7 @@
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
-                       <form id="contactForm" method="POST">
+                        <form id="contactForm" method="POST">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="name" id="user_name" type="text"
@@ -76,7 +76,8 @@
                             </div>
                             <!-- Phone number input (optional)-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="phone" id="user_phone" type="tel" placeholder="(123) 456-7890"/>
+                                <input class="form-control" name="phone" id="user_phone" type="tel"
+                                       placeholder="(123) 456-7890"/>
                                 <label>Phone number</label>
                             </div>
                             <!-- Message input-->
@@ -92,6 +93,13 @@
                                 <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
                             </div>
                         </form>
+                        <!-- Add Success/Error Messages -->
+                        <div class="alert alert-success d-none" id="submitSuccessMessage">
+                            Your message has been sent successfully!
+                        </div>
+                        <div class="alert alert-danger d-none" id="submitErrorMessage">
+                            Oops! Something went wrong. Please try again.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,9 +141,10 @@
     })();
 </script>
 
+<!-- JavaScript Code -->
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); // Prevent default form submission
 
         // Get form values
         const formData = {
@@ -150,16 +159,21 @@
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
 
-                // Display success message
+                // Show success message
                 document.getElementById('submitSuccessMessage').classList.remove('d-none');
 
-                // Send an automatic reply to the user
+                // Clear form fields
+                document.getElementById('contactForm').reset();
+
+                // Optionally, reload the page (remove if you want to stay on the page)
+                // location.reload();
+
+                // Send an automatic reply
                 const autoReplyData = {
                     user_name: formData.user_name,
                     user_email: formData.user_email,
                 };
 
-                // Send the auto-reply
                 emailjs.send('service_01ljlky', 'auto_reply', autoReplyData)
                     .then(function(autoReplyResponse) {
                         console.log('Auto-reply sent!', autoReplyResponse.status, autoReplyResponse.text);
@@ -169,6 +183,8 @@
 
             }, function(error) {
                 console.log('FAILED...', error);
+
+                // Show error message
                 document.getElementById('submitErrorMessage').classList.remove('d-none');
             });
     });
