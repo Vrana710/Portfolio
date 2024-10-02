@@ -76,7 +76,7 @@
                             </div>
                             <!-- Phone number input (optional)-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="phone" type="tel" placeholder="(123) 456-7890"/>
+                                <input class="form-control" name="phone" id="user_phone" type="tel" placeholder="(123) 456-7890"/>
                                 <label>Phone number</label>
                             </div>
                             <!-- Message input-->
@@ -135,28 +135,43 @@
 
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-     event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); // Prevent the default form submission
 
-     // Get form values
-     const contactNumber = Math.floor(Math.random() * 10000); // Random contact number
-     const formData = {
-         user_name: document.getElementById('user_name').value,
-         user_email: document.getElementById('user_email').value,
-         message: document.getElementById('message').value,
-         contact_number: contactNumber
-     };
+        // Get form values
+        const formData = {
+            user_name: document.getElementById('user_name').value,
+            user_email: document.getElementById('user_email').value,
+            user_phone: document.getElementById('user_phone').value,
+            message: document.getElementById('message').value,
+        };
 
-     // Send the email using EmailJS
-     emailjs.send('service_01ljlky', 'contact_form', formData)
-         .then(function(response) {
-             console.log('SUCCESS!', response.status, response.text);
-             document.getElementById('submitSuccessMessage').classList.remove('d-none');
-         }, function(error) {
-             console.log('FAILED...', error);
-             document.getElementById('submitErrorMessage').classList.remove('d-none');
-         });
- });
+        // Send the user's message using EmailJS
+        emailjs.send('service_01ljlky', 'contact_form', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
 
+                // Display success message
+                document.getElementById('submitSuccessMessage').classList.remove('d-none');
+
+                // Send an automatic reply to the user
+                const autoReplyData = {
+                    user_name: formData.user_name,
+                    user_email: formData.user_email,
+                };
+
+                // Send the auto-reply
+                emailjs.send('service_01ljlky', 'auto_reply', autoReplyData)
+                    .then(function(autoReplyResponse) {
+                        console.log('Auto-reply sent!', autoReplyResponse.status, autoReplyResponse.text);
+                    }, function(autoReplyError) {
+                        console.log('Auto-reply failed...', autoReplyError);
+                    });
+
+            }, function(error) {
+                console.log('FAILED...', error);
+                document.getElementById('submitErrorMessage').classList.remove('d-none');
+            });
+    });
 </script>
 </body>
 </html>
