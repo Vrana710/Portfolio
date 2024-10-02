@@ -17,6 +17,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet"/>
+    <style>
+        .table {
+            border-collapse: collapse; /* Ensures no double borders */
+            width: 100%; /* Optional: Set width to 100% for full-width table */
+        }
+        .table td {
+            border: none; /* Removes borders from table cells */
+            padding: 8px; /* Optional: Add some padding for better spacing */
+            text-align: left; /* Ensure text is left-aligned */
+        }
+        .table tr:hover {
+            background-color: #f0f0f0; /* Highlight color when hovering over a row */
+        }
+    </style>
 </head>
 <body class="d-flex flex-column h-100">
 <main class="flex-shrink-0">
@@ -24,10 +38,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
             <div class="col-auto">
-                <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/"><i
-                        class="bi bi-linkedin"></i></a>
-                 <span class="mx-1"> </span>
-                <a class="text-gradient" href="https://github.com/Vrana710"><i class="bi bi-github"></i></a>
+                <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <span class="mx-1"> </span>
+                <a class="text-gradient" href="https://github.com/Vrana710" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
             </div>
             <span class="mx-1"> </span>
             <a class="navbar-brand" href="index.html"><span
@@ -54,7 +71,9 @@
                     <!-- Header text content-->
                     <div class="text-center text-xxl-start">
                         <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                            <div class="text-uppercase">Design &middot; Software Development &middot; with Cloud</div>
+                            <div class="text-uppercase">UX / UI Design &middot; Software Development &middot; Cloud
+                                Engineering
+                            </div>
                         </div>
                         <div class="fs-3 fw-light text-muted">I can help your business to</div>
                         <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get online and grow fast</span>
@@ -203,7 +222,7 @@
             </div>
         </div>
     </header>
-    <!-- About Section-->
+    <!-- About Section -->
     <section class="bg-light py-5">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
@@ -214,65 +233,76 @@
                         <p class="text-muted">
                             Here are some key aspects of my professional background:
                         </p>
-
-
-                        <p class="text-muted">
-                            I’m a passionate <b class="text-gradient">Software Engineer</b>
-                            with over 5 years of experience in <b class="text-gradient">software
-                            development</b> and <b class="text-gradient">mentoring</b>.
-                            <br>
-                            My expertise lies in building <b class="text-gradient">well-designed </b>,
-                            <b class="text-gradient"> scalable applications </b> with a focus on <b
-                                class="text-gradient"> clean
-                            code </b>, seamless user experiences, and continuous growth.
-                            <br>
-                            I hold both <b class="text-gradient">Bachelor's</b> and <b class="text-gradient">Master's
-                            degrees</b> in <b class="text-gradient">Computer Science</b>, officially recognized
-                            by <b class="text-gradient">ZAB</b> in <b class="text-gradient">Germany</b>.
-                            <br>
-                            Currently, I’m sharpening my skills through an intensive
-                            <b class="text-gradient">Software Engineering Bootcamp</b>
-                            funded by <b class="text-gradient">the German Government</b>,
-                            <b class="text-gradient">Ongoing certification: AWS Certified Cloud Practitioner</b>,
-                            expanding my expertise in <b class="text-gradient">AWS Cloud technologies</b>.
-                            <br>
-                            I enjoy simplifying complex concepts and am committed to delivering high-quality
-                            solutions that address real-world challenges.
-                            <br>
-                        </p>
-                        <p class="text-muted">
-                            <b class="text-gradient">
-                                My key skills include: </b>
-                            <b class="text-gradient">
-                                - Software Development </b>
-                            <b class="text-gradient">
-                                - Application Design </b>
-                            <b class="text-gradient">
-                                - Clean Code Practices </b>
-                            <b class="text-gradient">
-                                - User Experience Optimization </b>
-                            <b class="text-gradient">
-                                - Continuous Learning and Growth </b>
-                            <b class="text-gradient">
-                                - Teaching and Mentoring</b>
-                        </p>
-
+                        <table class="table">
+                            <tbody class="text-muted">
+                            <tr>
+                                <td>
+                                    I’m a passionate <span style="color: #9e50ad;">Software Engineer</span>
+                                    with over 5 years of experience in <span style="color: #9e50ad;">software development</span>
+                                    and <span style="color: #9e50ad;">mentoring</span>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    My expertise lies in building <span style="color: #9e50ad;">well-designed</span>,
+                                    <span style="color: #9e50ad;">scalable applications</span> with a focus on <span
+                                        style="color: #9e50ad;">clean code</span>,
+                                    seamless user experiences, and continuous growth.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    I hold both <span style="color: #9e50ad;">Bachelor's</span> and <span
+                                        style="color: #9e50ad;">Master's degrees</span>
+                                    in <span style="color: #9e50ad;">Computer Science</span>, officially recognized by
+                                    <span style="color: #9e50ad;">ZAB</span> in <span
+                                        style="color: #9e50ad;">Germany</span>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Currently, I’m sharpening my skills through an intensive <span
+                                        style="color: #9e50ad;">Software Engineering Bootcamp</span>
+                                    funded by <span style="color: #9e50ad;">the German Government</span>,
+                                    <span style="color: #9e50ad;">ongoing certification: AWS Certified Cloud Practitioner</span>,
+                                    expanding my expertise in <span
+                                        style="color: #9e50ad;">AWS Cloud technologies</span>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    I enjoy simplifying complex concepts and am committed to delivering high-quality
+                                    solutions that address real-world challenges.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span style="color: #9e50ad;">My key skills include:</span>
+                                    <br>
+                                    <span style="color: #9e50ad;">Software Development, Application Design, Clean Code Practices, User Experience Optimization, Continuous Learning and Growth, Teaching and Mentoring.</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                         <p class="text-muted">
                             You can check out my latest projects on <a class="text-gradient"
                                                                        href="https://github.com/Vrana710">GitHub</a>.
                             Feel free to reach out if you'd like to connect or collaborate!
                         </p>
-<!--                        <div class="d-flex justify-content-center fs-2 gap-4">-->
-<!--                            &lt;!&ndash;                                    <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>&ndash;&gt;-->
-<!--                            <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/"><i-->
-<!--                                    class="bi bi-linkedin"></i></a>-->
-<!--                            <a class="text-gradient" href="https://github.com/Vrana710"><i class="bi bi-github"></i></a>-->
-<!--                        </div>-->
+                        <!--
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                            <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/"><i class="bi bi-linkedin"></i></a>
+                            <a class="text-gradient" href="https://github.com/Vrana710"><i class="bi bi-github"></i></a>
+                        </div>
+                        -->
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </main>
 <!-- Footer-->
 <footer class="bg-white py-4 mt-auto">
@@ -294,10 +324,13 @@
                 <span class="mx-1">&middot;</span>
                 <a class="text-gradient" href="contact.html">Contact</a>
                 <span class="mx-1">&middot;</span>
-                <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/"><i
-                        class="bi bi-linkedin"></i></a>
-                 <span class="mx-1">&middot;</span>
-                <a class="text-gradient" href="https://github.com/Vrana710"><i class="bi bi-github"></i></a>
+                <a class="text-gradient" href="https://www.linkedin.com/in/varsha-rana/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <span class="mx-1">&middot;</span>
+                <a class="text-gradient" href="https://github.com/Vrana710" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
             </div>
         </div>
     </div>
