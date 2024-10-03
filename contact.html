@@ -134,7 +134,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
     (function() {
        emailjs.init('uOer9oY1XgoARgHFf'); // Replace with your EmailJS user ID
@@ -148,10 +149,10 @@
 
         // Get form values
         const formData = {
-            user_name: document.getElementById('user_name').value,
-            user_email: document.getElementById('user_email').value,
-            user_phone: document.getElementById('user_phone').value,
             message: document.getElementById('message').value,
+            user_name: document.getElementById('user_name').value,
+            user_phone: document.getElementById('user_phone').value,
+            user_email: document.getElementById('user_email').value
         };
 
         // Send the user's message using EmailJS
