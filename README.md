@@ -10,6 +10,12 @@ Welcome to my portfolio! I am Varsha Rana, a Software Engineer with a background
 - **[Projects](projects.html)**: Showcase of my projects and accomplishments.
 - **[Contact](contact.html)**: Ways to reach me for opportunities and inquiries.
 
+## Visit My Portfolio
+
+Feel free to check out my portfolio website!
+
+[Go to My Portfolio](https://vrana710.github.io/Portfolio/)
+
 ## Demo
 
 ![My Portfolio](assets/home.png)
