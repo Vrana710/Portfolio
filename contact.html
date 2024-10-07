@@ -158,18 +158,6 @@
              message: document.getElementById('message').value
         };
 
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get form values
-        const formData = {
-             user_name: document.getElementById('user_name').value,
-             user_email: document.getElementById('user_email').value,
-             user_phone: document.getElementById('user_phone').value,
-             message: document.getElementById('message').value
-        };
-
         // Get the current date and time
         const currentDateTime = new Date().toLocaleString();
 
@@ -213,9 +201,6 @@
 
                 // Clear form fields
                 document.getElementById('contactForm').reset();
-
-                // Optionally, reload the page (remove if you want to stay on the page)
-                // location.reload();
 
                 // Send an automatic reply
                 const autoReplyData = {
